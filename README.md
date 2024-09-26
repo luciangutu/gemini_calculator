@@ -16,6 +16,7 @@ pip install -r requirements.txt
 ```
 
 3. Configure the Google API KEY
+
 For creating a Google API KEY, take a look [here](https://ai.google.dev/gemini-api/docs/oauth)
 
 ```shell

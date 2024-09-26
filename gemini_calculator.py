@@ -61,8 +61,6 @@ input_tokens = int(response_metadata.prompt_token_count)
 output_tokens = int(response_metadata.candidates_token_count)
 
 print(response.text)
-print(f'{input_tokens=}')
-print(f'{output_tokens=}')
 
 if input_tokens <= 128000:
     input_token_cost = input_tokens * model_pricing[gemini_model]["INPUT_PRICING_LOW"]
@@ -71,7 +69,9 @@ else:
     input_token_cost = input_tokens * model_pricing[gemini_model]["INPUT_PRICING_HIGH"]
     output_token_cost = output_tokens * model_pricing[gemini_model]["OUTPUT_PRICING_HIGH"]
 
-print(f'Costs using {model_pricing} model:')
+print(f'Using {gemini_model} model...')
+print(f'{input_tokens=}')
+print(f'{output_tokens=}')
 print(f'Input costs: ${input_token_cost:.8f}')
 print(f'Output costs: ${output_token_cost:.8f}')
 print(f'Total cost: ${input_token_cost + output_token_cost:.8f}')

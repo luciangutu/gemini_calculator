@@ -71,6 +71,7 @@ else:
     input_token_cost = input_tokens * model_pricing[gemini_model]["INPUT_PRICING_HIGH"]
     output_token_cost = output_tokens * model_pricing[gemini_model]["OUTPUT_PRICING_HIGH"]
 
+print(f'Costs using {model_pricing} model:')
 print(f'Input costs: ${input_token_cost:.8f}')
 print(f'Output costs: ${output_token_cost:.8f}')
 print(f'Total cost: ${input_token_cost + output_token_cost:.8f}')
